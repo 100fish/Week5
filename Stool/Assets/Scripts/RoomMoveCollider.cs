@@ -2,23 +2,17 @@ using UnityEngine;
 
 public class RoomMoveCollider : MonoBehaviour
 {
-    RoomMover room;
-    public int room_id_to_go_to;
+    [SerializeField] private int RoomID = 0;
+    [SerializeField] private int RoomStartID = 0;
 
-    bool within = false;
-
-    public void Awake()
+    public void OnTriggerEnter(Collider other)
     {
-        room = transform.root.GetComponent<RoomMover>();
-
-        MeshRenderer rend = transform.GetComponent<MeshRenderer>();
-        rend.enabled = false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer != 6) return;
-
-        room.Set_New_Room(room_id_to_go_to);
+        print("OnLine : 1");
+        if(other.gameObject.tag == "Player")
+        {
+            print("OnLine : 2");
+            RoomManager.instance.Activate_New_Room(RoomID, RoomStartID);
+        }
+       
     }
 }

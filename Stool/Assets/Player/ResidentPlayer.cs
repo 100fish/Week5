@@ -12,6 +12,8 @@ public class ResidentPlayer : MonoBehaviour
 
     private CharacterController characterController;
 
+    public CharacterController Get_CharacterController() => characterController;
+
     private PlayerInput playerInput;
 
     [SerializeField]

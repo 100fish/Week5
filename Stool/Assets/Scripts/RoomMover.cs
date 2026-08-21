@@ -1,33 +1,27 @@
 using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RoomMover : MonoBehaviour
 {
-    public bool start_room = false;
-    public Room room;
-    public RoomMover[] rooms;
+    [SerializeField] private int RoomID = 0;
 
-    private void Awake()
+    [SerializeField] private List<Room_Start> room_starts;
+
+    [SerializeField] private bool Start_Room = false;
+
+    public int Get_RoomID() => RoomID;
+
+    public List<Room_Start> Get_RoomStarts() => room_starts;
+
+    public void Awake()
     {
-        //room.StartPosition
-
-        if (start_room) return;
-        room.Room_Params.SetActive(false);
+        if (!Start_Room) Activate_Room(false);
     }
 
-    public void Set_New_Room(int room_id)
+    public void Activate_Room(bool activate)
     {
-        for(var i = 0; i < rooms.Length; i++)
-        {
-            if (rooms[i].room.room_id != room_id) continue;
-
-            rooms[i].room.Room_Params.SetActive(true);
-            room.Room_Params.SetActive(false);
-
-            //Gamemanager.Get_Player().transform.position = room.StartPosition.position;
-
-            break;
-        }
+        gameObject.SetActive(activate);
     }
 }
