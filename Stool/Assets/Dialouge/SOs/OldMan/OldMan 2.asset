@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f57265f2d95884493f924517248368, type: 3}
+  m_Name: OldMan 2
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeText
+  paragraphs:
+  - 'Hmm? How did I know you hat a hat without me eyes? Its a good question... '
+  - When I was a younger man, younger than you now, there was this temple on the
+    hill outside my house.
+  - Big, large lookin' building. Think it was an industrial complex bought out by
+    some traditionalists.
+  - Anyways they trained students there. Exclusive sect of young men and woman who'd
+    over time they'd turn into warriors.
+  - 'Don''t know what happened to them, they''d always leave all proper and you''d
+    never hear about them again. '
+  - I guess the brightest stars burn the fastest...
