@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f57265f2d95884493f924517248368, type: 3}
+  m_Name: OldMan 3
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeText
+  paragraphs:
+  - Huh? Oh right, right. So yeah this temple. Big lookin' thing, all facy, lotta
+    people.
+  - 'Anyway at the end of every August before the spring they''d choose one student
+    to sip from the "Drink of Life" as they called it. '
+  - Some black liquid from a paper cup. Nasty lookin' stuff. Said to give the drinker
+    amazing powers.
+  - Or kill them, can't remember. Fifty fifty I guess.
+  - Anyway them traditionalists would always make a big show out of it, celebrations
+    and music and what have you.
+  - 'Me and my friends would sneak into the scrub land off the asphalt drive they''d
+    be celebrating. '
+  - One year though, they had some scrawny lookin' fella up there on that podium.
+    And they revealed the liquid with the reverence for him to drink.
+  - Its said to watch was a sin or somethin' so everyone had this purple cloth over
+    there heads as they sat and prayed and the drums banged on.
+  - In that moment, I had a wicked thought. Curiosity will kill ya'know and it should
+    have killed me.
+  - 'I leaped from the bushes and in that moment of pause while nobody was looking
+    I swiped the drink out from the kids claws and tossed it back right there on
+    stage. '
+  - It tasted like tar and grease and what have you, very unpleasent.
+  - And the kid was swearing and screaming, tossing a fit.
+  - So I ducked out of the scene and they chased me up and down the streets. I ended
+    up skipping town and they never really followed me.
+  - I guess they were stuck in there little building i guess.

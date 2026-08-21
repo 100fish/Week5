@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f57265f2d95884493f924517248368, type: 3}
+  m_Name: OldMan 4
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeText
+  paragraphs:
+  - Hmm... oh yes the hat. Well anyhow that tar stuff did give me powers!
+  - I could sense the ground around me ya'know, could see the inside of things and
+    the earth without having to dig it up.
+  - Some kind of new sense if you will.
+  - Never used it for much though. Except to fix a bike. Shoot, I could tell you
+    what was wrong with a bike after just a minute of feeling it up!
+  - Nobody belived my powers but I was bang on about the bike everytime! I swears
+    it.
+  - Anyhow, it helps now without me eyes an all. I can sense you, traveler. In some
+    ways, I can see you there...

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f57265f2d95884493f924517248368, type: 3}
+  m_Name: OldMan 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeText
+  paragraphs:
+  - Heya hows it going...
+  - Sometimes I come down here to feel less blue ya know.
+  - 'And to sell bikes, mostly to sell bikes. Bike salesmen. '
+  - Pays to bills, gets me going somewhere, gets you going somewhere, ya'know?
+  - everybodys gotta go somewhere.
+  - Listen, speaking of which, you seem like a good fella.
+  - I would say you look like a good fella but I cant see on account of my eyes an
+    all.
+  - Lost them a while ago, super annoying. Keeps me down.
+  - But anyway, smart fella, good fella. Care to buy a bike?
+  - Ah, no money. I get it. Really I do, why do you think I'm down here. Nobodies
+    buying bikes anymore.
+  - Good luck to you. If you ever wanted to sell that hat to someone I'd be willing
+    to buy it off ya.
