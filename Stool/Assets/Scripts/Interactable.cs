@@ -9,7 +9,9 @@ public abstract class Interactable : MonoBehaviour, IInteractable
 
     PlayerInput input;
 
-    bool added_to_interactable = false;
+    public bool added_to_interactable = false;
+
+    bool _within_distance;
 
     public void Start()
     {
@@ -18,18 +20,25 @@ public abstract class Interactable : MonoBehaviour, IInteractable
 
     public void Update()
     {
-        if (input.Standard.Interact.WasPressedThisFrame() && IsWithinInteractDistance())
+        if (input.Standard.Interact.WasPressedThisFrame() && _within_distance)
         {
             Interact();
         }
+    }
 
-        if (IsWithinInteractDistance() && !added_to_interactable)
+    public void LateUpdate()
+    {
+        _within_distance = IsWithinInteractDistance();
+
+        print("Interacting 0 _within_distance: " + _within_distance + "distance: " + Vector2.Distance(Gamemanager.Get_Player().transform.localPosition, transform.localPosition));
+
+        if (_within_distance && !added_to_interactable)
         {
             DialougeController.Instance.StartInteractText();
-            print("Interacting! 1");
+            print("Interacting! 1" + name);
             added_to_interactable = true;
         }
-        else if (!IsWithinInteractDistance() && added_to_interactable)
+        else if (!_within_distance && added_to_interactable)
         {
             if (DialougeController.Instance.IsInTextRightNow())
             {
@@ -38,7 +47,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
             }
 
             DialougeController.Instance.FinishInteractText();
-            print("Interacting! 2");
+            print("Interacting! 2: " + name);
             added_to_interactable = false;
         }
     }
@@ -50,7 +59,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
         float _interact_distance = INTERACT_DISTANCE;
        // if (added_to_interactable) _interact_distance *= 1.1f;
 
-        if (Vector2.Distance(Gamemanager.Get_Player().transform.position, transform.position) < _interact_distance) return true;
+        if (Vector2.Distance(Gamemanager.Get_Player().transform.localPosition, transform.localPosition) < _interact_distance) return true;
         return false;
     }
 
@@ -63,9 +72,9 @@ public abstract class Interactable : MonoBehaviour, IInteractable
         return _dialougeText;
     }
 
-    public void Talk(string name, DialougeText dialougeText)
+    public void Talk(string name, DialougeText dialougeText, RoomMover talkRoom)
     {
         //start convo
-        DialougeController.Instance.DisplayNextParagraph(name, dialougeText);
+        DialougeController.Instance.DisplayNextParagraph(name, dialougeText, talkRoom);
     }
 }

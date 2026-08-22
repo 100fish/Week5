@@ -38,10 +38,10 @@ public class DialougeController : MonoBehaviour
 
     private Coroutine typeDialougeCoroutine;
 
-    private const float MAX_TYPE_TIME = 0.1f;
-    private const int MAX_CHAR_GRACE = 2;
+    private float MAX_TYPE_TIME = 0.1f;
+    private int MAX_CHAR_GRACE = 2;
 
-    public void DisplayNextParagraph(string name, DialougeText dialougeText)
+    public void DisplayNextParagraph(string name, DialougeText dialougeText, RoomMover talkRoom)
     {
         if (isInteractText)
         {
@@ -54,7 +54,7 @@ public class DialougeController : MonoBehaviour
         //if there is nothing in the queue
         if (paragraphs.Count == 0)
         {
-            if (!conversationEnded) StartConversation(dialougeText);
+            if (!conversationEnded) StartConversation(dialougeText, talkRoom);
             else if (conversationEnded && !isTyping)
             {
                 EndConversation();
@@ -82,7 +82,7 @@ public class DialougeController : MonoBehaviour
         typeDialougeCoroutine = StartCoroutine(TypeDialougeText(p));
     }
 
-    private void StartConversation(DialougeText dialougeText)
+    private void StartConversation(DialougeText dialougeText, RoomMover talkRoom)
     {
         //activate gameObject
 
@@ -90,6 +90,9 @@ public class DialougeController : MonoBehaviour
 
         //Update Speaker nme
         Set_Name_Text(n);
+
+        Gamemanager.Get_Player().Set_Free(true);
+        RoomManager.instance.Activate_Talk_Room(talkRoom);
 
         //add dialouge text to the queue
         for (int i = 0; i < dialougeText.paragraphs.Length; i++)
@@ -120,7 +123,10 @@ public class DialougeController : MonoBehaviour
         //return bool to false
         conversationEnded = false;
 
-        if(interact_after)
+        Gamemanager.Get_Player().Set_Free(false);
+        RoomManager.instance.Deactivate_Talk_Room();
+
+        if (interact_after)
         {
             interact_after = false;
             StartInteractText();
