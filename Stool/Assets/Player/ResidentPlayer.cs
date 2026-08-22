@@ -41,6 +41,8 @@ public class ResidentPlayer : MonoBehaviour
 
     private void Update()
     {
+        if (freeze) return;
+
         //move character
         MovePlayer();
     }
@@ -60,7 +62,7 @@ public class ResidentPlayer : MonoBehaviour
         Vector3 _moveAxis = Get_Movement_Direction();
         // Apply gravity
         playerVelocity.y += gravity * Time.deltaTime;
-        print("moveAxis: " + _moveAxis);
+        //print("moveAxis: " + _moveAxis);
         if (playerVelocity.z > 0)
         {
             playerVelocity.z += (gravity * Time.deltaTime);
@@ -78,7 +80,14 @@ public class ResidentPlayer : MonoBehaviour
 
         rotation_transform.Rotate(new Vector3(0, playerInput.Standard.Movement.ReadValue<Vector2>().x, 0) * rotationSpeed);
         float _new_rotation = Mathf.Round(rotation_transform.localEulerAngles.y / rotationAngleDivide) * rotationAngleDivide;
-        print("new rotation: " + _new_rotation);
+        //print("new rotation: " + _new_rotation);
         transform.eulerAngles = new Vector3(0, _new_rotation, 0);
+    }
+
+    private bool freeze = false;
+
+    public void Set_Free(bool _freeze)
+    {
+       //freeze = _freeze;
     }
 }

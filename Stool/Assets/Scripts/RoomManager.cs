@@ -8,13 +8,30 @@ public class RoomManager : MonoBehaviour
     public static RoomManager instance;
 
     RoomMover current_roomMover;
+    RoomMover talk_room;
 
     public void Awake()
     {
         instance = this;
     }
 
+    public void Set_Current_Room(RoomMover roomMover) => current_roomMover = roomMover;
+   
     int activate_new_player_position = -1;
+
+    public void Activate_Talk_Room(RoomMover _talkRoom)
+    {
+        talk_room = _talkRoom;
+
+        talk_room.Activate_Room(true);
+        current_roomMover.Activate_Room(false);
+    }
+
+    public void Deactivate_Talk_Room()
+    {
+        talk_room.Activate_Room(false);
+        current_roomMover.Activate_Room(true);
+    }
 
     public void Activate_New_Room(int roomId, int roomStartID)
     {
