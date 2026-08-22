@@ -71,13 +71,13 @@ public class DialougeController : MonoBehaviour
 
     private void New_Paragraph()
     {
-        if (paragraphs.Count == 0)
+        if (paragraphs.Count == 0 && conversationEnded)
         {
             EndConversation();
             return;
         }
 
-       p = paragraphs.Dequeue().ToUpper();
+        p = paragraphs.Dequeue().ToUpper();
 
         typeDialougeCoroutine = StartCoroutine(TypeDialougeText(p));
     }
