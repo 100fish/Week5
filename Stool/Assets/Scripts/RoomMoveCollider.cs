@@ -5,6 +5,13 @@ public class RoomMoveCollider : MonoBehaviour
     [SerializeField] private int RoomID = 0;
     [SerializeField] private int RoomStartID = 0;
 
+    public void Awake()
+    {
+        MeshRenderer mr = GetComponent<MeshRenderer>();
+
+        if(mr != null ) mr.enabled = false;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         print("OnLine : 1");

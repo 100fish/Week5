@@ -18,6 +18,11 @@ public class RoomMover : MonoBehaviour
     public void Awake()
     {
         if (!Start_Room) Activate_Room(false);
+
+        for(var i = 0;  i < room_starts.Count; i++)
+        {
+            room_starts[i].Transform.gameObject.SetActive(false);
+        }
     }
 
     public void Activate_Room(bool activate)

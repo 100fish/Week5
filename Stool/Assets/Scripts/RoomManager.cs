@@ -35,7 +35,7 @@ public class RoomManager : MonoBehaviour
 
     public void LateUpdate()
     {
-        if(activate_new_player_position > 0)
+        if(activate_new_player_position >= 0)
         {
             Set_Player(activate_new_player_position);
             activate_new_player_position = -1;
@@ -49,10 +49,11 @@ public class RoomManager : MonoBehaviour
         for (int i = 0; i < _room_starts.Count;i++)
         {
             if (_room_starts[i].RoomStartID != roomStartID) continue;
-
+            print("OnLine : 3");
             Gamemanager.Get_Player().Get_CharacterController().enabled = false;
             Gamemanager.Get_Player().transform.position = _room_starts[i].Transform.position;
             Gamemanager.Get_Player().Get_CharacterController().enabled = true;
+            print("OnLine : 4");
             //Gamemanager.Get_Player().Get_CharacterController().SimpleMove(_room_starts[i].Transform.localPosition);
         }
         

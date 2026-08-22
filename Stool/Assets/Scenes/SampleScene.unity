@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c06920edb23f4cb4cbf097e16f9c80fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2348053109929956537, guid: c06920edb23f4cb4cbf097e16f9c80fb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -398,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeTalk
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c6140a31d5c7254381a98da8260c390, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8794193726729510991, guid: 1c6140a31d5c7254381a98da8260c390, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -576,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fisheye
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 162875a53855dc44f83005337396497e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1318855232813596902, guid: 162875a53855dc44f83005337396497e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -640,6 +652,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 89cd0e6cae35cc94187e1a0178af131a, type: 3}
       propertyPath: m_Name
       value: BinFar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89cd0e6cae35cc94187e1a0178af131a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -716,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d1b62bf065f484740a36c2c10422e351, type: 3}
       propertyPath: m_Name
       value: Gateway
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d1b62bf065f484740a36c2c10422e351, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -903,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 135ab8389d276d140abadc50a63bb72b, type: 3}
       propertyPath: m_Name
       value: TreeApproach
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 135ab8389d276d140abadc50a63bb72b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7339356831882890532, guid: 135ab8389d276d140abadc50a63bb72b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1246,7 +1270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760843367fe78040bb0001c8e4cf48f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2329080018736560743, guid: d760843367fe78040bb0001c8e4cf48f, type: 3}
       propertyPath: m_Enabled
@@ -1334,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 106847a15c5f1d14c89a59a52f8c7b35, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6389987002646570301, guid: 106847a15c5f1d14c89a59a52f8c7b35, type: 3}
       propertyPath: m_Enabled
