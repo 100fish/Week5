@@ -39,7 +39,7 @@ public class DialougeController : MonoBehaviour
     private Coroutine typeDialougeCoroutine;
 
     private const float MAX_TYPE_TIME = 0.1f;
-    private const int MAX_CHAR_GRACE = 5;
+    private const int MAX_CHAR_GRACE = 2;
 
     public void DisplayNextParagraph(string name, DialougeText dialougeText)
     {
@@ -210,6 +210,7 @@ public class DialougeController : MonoBehaviour
 
     public bool IsInTextRightNow()
     {
+        if (isInteractText) return false;
         if (paragraphs.Count > 0 || conversationEnded) return true;
         else return false;
     }

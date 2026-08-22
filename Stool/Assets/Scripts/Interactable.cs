@@ -5,7 +5,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
     [SerializeField] private DialougeText[] dialougeText;
     private int dialougeIndex_count = 0;
 
-    private const float INTERACT_DISTANCE = 2f;
+    private float INTERACT_DISTANCE = 1.35f;
 
     PlayerInput input;
 
@@ -20,7 +20,6 @@ public abstract class Interactable : MonoBehaviour, IInteractable
     {
         if (input.Standard.Interact.WasPressedThisFrame() && IsWithinInteractDistance())
         {
-            
             Interact();
         }
 
@@ -38,7 +37,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
                 DialougeController.Instance.EndConversation();
             }
 
-                DialougeController.Instance.FinishInteractText();
+            DialougeController.Instance.FinishInteractText();
             print("Interacting! 2");
             added_to_interactable = false;
         }
@@ -49,7 +48,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
     private bool IsWithinInteractDistance()
     {
         float _interact_distance = INTERACT_DISTANCE;
-        if (added_to_interactable) _interact_distance *= 1.1f;
+       // if (added_to_interactable) _interact_distance *= 1.1f;
 
         if (Vector2.Distance(Gamemanager.Get_Player().transform.position, transform.position) < _interact_distance) return true;
         return false;
