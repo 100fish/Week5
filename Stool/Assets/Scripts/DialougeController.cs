@@ -71,7 +71,13 @@ public class DialougeController : MonoBehaviour
 
     private void New_Paragraph()
     {
-        p = paragraphs.Dequeue().ToUpper();
+        if (paragraphs.Count == 0)
+        {
+            EndConversation();
+            return;
+        }
+
+       p = paragraphs.Dequeue().ToUpper();
 
         typeDialougeCoroutine = StartCoroutine(TypeDialougeText(p));
     }
@@ -83,12 +89,26 @@ public class DialougeController : MonoBehaviour
         Activate_Text(true);
 
         //Update Speaker nme
-        NameText.text = n;
+        Set_Name_Text(n);
 
         //add dialouge text to the queue
         for (int i = 0; i < dialougeText.paragraphs.Length; i++)
         {
             paragraphs.Enqueue(dialougeText.paragraphs[i]);
+        }
+    }
+
+    public void Set_Name_Text(string _n)
+    {
+        NameText.text = _n;
+
+        if (NameText.transform.childCount <= 0) return;
+
+        for (var i = 0; i < NameText.transform.childCount; i++)
+        {
+            TextMeshProUGUI t = NameText.transform.GetChild(i).GetComponent<TextMeshProUGUI>();
+
+            if (t != null) t.text = _n;
         }
     }
     
@@ -113,7 +133,7 @@ public class DialougeController : MonoBehaviour
 
     public void Activate_Text(bool active)
     {
-        if(active) NameText.text = "";
+        if (active) Set_Name_Text("");
         if (NameText.IsActive() != active) NameText.gameObject.SetActive(active);
         if (DialougeText.IsActive() != active) DialougeText.gameObject.SetActive(active);
     }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f57265f2d95884493f924517248368, type: 3}
+  m_Name: TreeSitter 2
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeText
+  paragraphs:
+  - I tried once to go deeper into the bush, past this tree.
+  - 'Found a nice outcrop. Then a field of yellow reeds with a good hill to look
+    out on. '
+  - 'I guess I got a bit to far out after that. Got lost in the forest for a little
+    bit. Crossing over the same lake, back and forth.  '
+  - Found the way back, evenutually. I appeared on the other end of the park on one
+    of the trails. I guess I crossed further than I thought.
+  - It gives you more of an appreciation of people in movies getting lost in the
+    forest.
+  - 'Like "yeah, now I get it". '

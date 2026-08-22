@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialougeText[] dialougeText;
-    public int dialougeIndex_count = 0;
+    private int dialougeIndex_count = 0;
 
     private const float INTERACT_DISTANCE = 2f;
 
